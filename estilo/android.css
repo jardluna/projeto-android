@@ -1,0 +1,203 @@
+@charset "UTf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format(opentype);
+    font-weight: normal; 
+}
+
+:root {
+    /*Paleta do Projeto*/
+    --cor0: #c2ffdd;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: 'Arial', 'Verdana', 'Helvetica', sans-serif;
+    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --fonte-android: 'Android', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-image: linear-gradient(180deg, var(--cor2), var(--cor3), var(--cor4), var(--cor5));
+}
+
+header h1 {
+    font-family: var(--fonte-destaque);
+    color: hsl(0, 0%, 100%);
+    font-size: 3em;
+    text-align: center;
+    font-weight: normal;
+    padding: 20px;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-family: var(--fonte-padrao);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 5px;
+}   
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+nav a:hover {
+    background-color: var(--cor1);
+    color: var(--cor5);
+    border-radius: 50px;
+}
+
+main {
+    background-color: white;
+    margin: 0px auto 40px auto;
+    max-width: 750px;
+    min-width: 250px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1{
+    font-family: var(--fonte-android);
+    color: var(--cor5);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    background-image: linear-gradient(90deg, var(--cor1), transparent 60%);
+    color: var(--cor5);
+    font-weight: normal;
+}
+
+main p {
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 2em;
+    padding: 10px;
+}
+
+main a {
+    color: var(--cor3);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+}
+
+main a:hover {
+    background-color: var(--cor1);
+    color: var(--cor5);
+    border-radius: 50px;
+    text-decoration: underline;
+}
+
+main a.externo::after {
+    content: '\00A0\1F517';
+}
+
+main div.video {
+    background-color: var(--cor3);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+    position: relative;
+    padding-bottom: 52%;
+}
+
+main div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+main strong {
+    color: var(--cor3);
+}
+
+main img {
+    width: 100%;
+}
+
+main img.bugdroid {
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}
+
+main aside {
+    background-color: var(--cor0);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+main aside h3 {
+    background-color: var(--cor3);
+    color: white;
+    padding: 5px 10px 5px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+main aside ul {
+    list-style-position: inside;
+    columns: 2;
+    list-style-type: '\2714\00A0\00A0'; /* 00A0 é igual ao espaço na formatação nbsp */
+                                        /* \2714 é igual ao símbolo de check mark */
+    padding-left: 20px;
+}
+
+main aside p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer {
+    background-color: var(--cor5);
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
